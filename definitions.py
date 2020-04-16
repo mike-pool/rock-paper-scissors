@@ -5,6 +5,12 @@ SCISSORS = 2
 choices_list = ['rock', 'paper', 'scissors']
 choices = {choices_list[i] : i for i in range(len(choices))}
 
+win_table = (
+			['rock', 'scissors'],
+			['paper', 'rock']
+			['scissors', 'paper']
+			)
+
 def make_selection_int(string_in):
 	return choices(string_in)
 	#!!Handle int input as well
