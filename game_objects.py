@@ -1,6 +1,7 @@
 import time
-import definitions
 import random
+
+import definitions
 
 		
 class game:
@@ -16,12 +17,12 @@ class game:
 	
 	def conduct_round():
 		computer.make_selection()
-		human.set_selection(make_selection_int(input('Choose Rock, Paper, or Scissors.\n'')))
+		human.set_selection(input('Choose Rock, Paper, or Scissors.\n''))
 		#!!Handle erroneous inputs
 		winner = resolve_shoot(human, computer):
-		print('You chose {f}.\n'.make_selection_str(human.get_selection()))
+		print('You chose {f}.\n'.human.get_selection())
 		time.sleep(2)
-		print('The computer chose {f}.\n'.make_selection_str(computer.get_selection()))
+		print('The computer chose {f}.\n'.(computer.get_selection())
 		time.sleep(2)
 		if winner != 'NA':
 			print(f'{winner} won!\n')
@@ -30,14 +31,14 @@ class game:
 		time.sleep(2)
 		
 	def resolve_shoot(player0, player1):
-		p0 = player0.get_selection_int()
-		p1 = player1.get_selection_int()
+		p0 = player0.get_selection()
+		p1 = player1.get_selection()
 		
 		if p0 == p1
 			return 'NA'
 		else
 			for i in win_table:
-				if p0 = i[0] and p1 = i[1]:
+				if p0 == i[0] and p1 = i[1]:
 				#Player 0 selection is winner and player 1 selection is loser
 					return player0.get_name()
 				else
@@ -46,7 +47,7 @@ class game:
 		
 	def end_game():
 		name = human.get_name()
-		print(f'Thanks for playing {name}!')
+		print(f'Thanks for playing, {name}!')
 		
 	
 class player:
@@ -67,7 +68,7 @@ class (player)computer_player:
 		set_name('The computer')
 	
 	def make_selection():
-		set_selection(random.randint(0,2))
+		set_selection(make_selection_str(random.randint(0,2)))
 		
 class (player)human_player:
 	
