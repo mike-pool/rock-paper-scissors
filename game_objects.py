@@ -1,15 +1,9 @@
 import time
-#!!import random
+import definitions
+import random
 
-choices = {'rock': 0, 'paper': 1, 'scissors': 2)
 
-ROCK = 0
-PAPER = 1
-SCISSORS = 2
-
-def make_selection_int()
-		#!!logic to convert possible string input to corresponding integer value
-
+		
 class game:
 	def __init__():
 		initialize_game()
@@ -19,19 +13,32 @@ class game:
 		human = human_player()
 		computer = computer_player()
 		time.sleep(2)
-		human_name = input('Please enter a player name.\n')
-		human.set_name(human_name)
+		human.set_name(input('Please enter a player name.\n'))
 	
 	def conduct_round():
-		human.set_selection(make_selection_int(input('Choose Rock, Paper, or Scissors.\n'')))
 		computer.make_selection()
-		winner_name = def resolve_shoot(human, computer):
-		print(f'{winner} won!')
+		human.set_selection(make_selection_int(input('Choose Rock, Paper, or Scissors.\n'')))
+		#!!Handle erroneous inputs
+		winner = resolve_shoot(human, computer):
+		print('You chose {f}.\n'.make_selection_str(player0.get_selection()))
+		time.sleep(2)
+		print('The computer chose {f}.\n'.make_selection_str(player1.get_selection()))
+		time.sleep(2)
+		if winner != 'NA':
+			print(f'{winner} won!\n')
+		else
+			print('Tie!\n')
+		time.sleep(2)
 		
 	def resolve_shoot(player0, player1):
-		player0.get_selection()
-		player1.get_selection()
-		#!!logic to determine winner
+		sel0 = player0.get_selection_int()
+		sel1 = player1.get_selection_int()
+		
+		if sel0 == ROCK:
+			if sel1 == ROCK:
+				winner = string
+			
+		
 		return winner
 		
 	def end_game():
@@ -54,10 +61,10 @@ class player:
 
 class (player)computer_player:
 	def __init__():
-		set_name('computer')
+		set_name('The computer')
 	
 	def make_selection():
-		set_selection(#!!get random number 0, 1, or 2)
+		set_selection(random.randint(0,2))
 		
 class (player)human_player:
 	
