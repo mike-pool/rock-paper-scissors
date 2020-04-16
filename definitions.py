@@ -3,11 +3,11 @@ PAPER = 1
 SCISSORS = 2
 
 choices_list = ['rock', 'paper', 'scissors']
-choices = {choices_list[i] : i for i in range(len(choices))}
+choices = {choices_list[i] : i for i in range(len(choices_list))}
 
 win_table = (
 			['rock', 'scissors'],
-			['paper', 'rock']
+			['paper', 'rock'],
 			['scissors', 'paper']
 			)
 
