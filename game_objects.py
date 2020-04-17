@@ -5,21 +5,19 @@ from definitions import *
 from player_objects import *
 		
 class game:
-	test = 1
-	
+
 	def __init__(self):
 		self.initialize_game()
 		
 	def initialize_game(self):
-		self.test_init = game.test + 2
 		self.human = human_player()
 		self.computer = computer_player()
 		print('Welcome to Rock, Paper, Scissors!\n')
-		time.sleep(2)
-		human.set_name(input('Please enter a player name: '))
-		time.sleep(2)
+		#time.sleep(2)
+		self.human.set_name(input('Please enter a player name: '))
+		#time.sleep(2)
 	
-	def conduct_round():
+	def conduct_round(self):
 		computer.make_selection()
 		human.set_selection(input('Choose Rock, Paper, or Scissors.\n'))
 		#!!Handle erroneous inputs
@@ -34,7 +32,7 @@ class game:
 			print('Tie!\n')
 		time.sleep(2)
 		
-	def resolve_shoot(player0, player1):
+	def resolve_shoot(self, player0, player1):
 		p0 = player0.get_selection()
 		p1 = player1.get_selection()
 		
@@ -49,6 +47,6 @@ class game:
 				#Only other possibility aside from a tie is a loss for player 0
 					return player1.get_name()
 		
-	def end_game():
-		name = human.get_name()
+	def end_game(self):
+		name = self.human.get_name()
 		print(f'Thanks for playing, {name}!')
