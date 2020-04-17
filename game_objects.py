@@ -1,7 +1,8 @@
 import time
 import random
 
-import definitions
+from definitions import *
+from player_objects import *
 		
 class game:
 	test = 1
@@ -10,10 +11,10 @@ class game:
 		self.initialize_game()
 		
 	def initialize_game(self):
-		test_init = 2
+		self.test_init = game.test + 2
+		self.human = human_player()
+		self.computer = computer_player()
 		print('Welcome to Rock, Paper, Scissors!\n')
-		human = human_player()
-		computer = computer_player()
 		time.sleep(2)
 		human.set_name(input('Please enter a player name: '))
 		time.sleep(2)
@@ -51,26 +52,3 @@ class game:
 	def end_game():
 		name = human.get_name()
 		print(f'Thanks for playing, {name}!')
-		
-class player:
-	def set_selection(selection):
-		selection = selection
-		
-	def get_selection():
-		return selection
-	
-	def set_name(self, name):
-		name = str(name)
-	
-	def get_name():
-		return name	
-
-class computer_player(player):
-	def __init__(self):
-		self.set_name('The computer')
-	
-	def make_selection():
-		set_selection(make_selection_str(random.randint(0,2)))
-		
-class human_player(player):
-	pass
