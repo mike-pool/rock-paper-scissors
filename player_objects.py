@@ -3,24 +3,20 @@ import random
 from definitions import *
 
 class player:
-	def set_selection(self, selection):
-		self.selection = selection
-		
-	def get_selection(self):
-		return self.selection
-	
-	def set_name(self, name):
-		self.name = str(name)
-	
-	def get_name(self):
-		return self.name	
+	def __init__(self):
+		self.set_name = ''
+		self.selection = ''
 
 class computer_player(player):
 	def __init__(self):
-		self.set_name('The computer')
+		super().__init__()
+		self.name = 'The computer'
 	
 	def make_selection(self):
-		self.set_selection(make_selection_str(random.randint(0,2)))
+		self.selection = make_selection_str(random.randint(0,2))
+		#!!Function converting int to string should be contained in class - parent class as it's valid for all player types
 		
 class human_player(player):
-	pass
+	def __init__(self):
+		super().__init__()
+		self.set_name = 'Human'
