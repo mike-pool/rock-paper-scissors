@@ -1,5 +1,4 @@
 import time
-import random
 
 from definitions import *
 from player_objects import *
@@ -18,13 +17,13 @@ class game:
 		#time.sleep(2)
 	
 	def conduct_round(self):
-		computer.make_selection()
-		human.set_selection(input('Choose Rock, Paper, or Scissors.\n'))
+		self.computer.make_selection()
+		self.human.set_selection(input('Choose rock, paper, or scissors: '))
 		#!!Handle erroneous inputs
-		winner = resolve_shoot(human, computer)
-		print('You chose {f}.\n'.human.get_selection())
+		winner = self.resolve_shoot(self.human, self.computer)
+		print('You chose {}.\n'.format(self.human.get_selection()))
 		time.sleep(2)
-		print('The computer chose {f}.\n'.computer.get_selection())
+		print('The computer chose {}.\n'.format(self.computer.get_selection()))
 		time.sleep(2)
 		if winner != 'NA':
 			print(f'{winner} won!\n')

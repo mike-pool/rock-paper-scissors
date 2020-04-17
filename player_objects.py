@@ -1,4 +1,6 @@
-import definitions
+import random
+
+from definitions import *
 
 class player:
 	def set_selection(self, selection):
@@ -18,7 +20,7 @@ class computer_player(player):
 		self.set_name('The computer')
 	
 	def make_selection(self):
-		set_selection(make_selection_str(random.randint(0,2)))
+		self.set_selection(make_selection_str(random.randint(0,2)))
 		
 class human_player(player):
 	pass
